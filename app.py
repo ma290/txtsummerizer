@@ -15,7 +15,7 @@ class TextInput(BaseModel):
 async def summarize_text(input_data: TextInput):
     try:
         # Perform text summarization
-        summary = summarizer(input_data.text, max_length=130, min_length=30>
+        summary = summarizer(input_data.text, max_length=130, min_length=30)
         # Return the summary
         return {"summary": summary[0]['summary_text']}
     except Exception as e:
